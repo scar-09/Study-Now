@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Study Now</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-titlebar" data-tauri-drag-region>
+    <div class="titlebar-controls">
+      <button class="tb-btn" id="tb-minimize" title="Minimize">−</button>
+      <button class="tb-btn" id="tb-maximize" title="Maximize">□</button>
+      <button class="tb-btn tb-close" id="tb-close" title="Close">×</button>
+    </div>
+  </div>
+  <!-- Content Container (for zoom) -->
+  <div class="content-container" id="content-container">
+    
+    <!-- Screen 1: Start -->
+    <div class="screen" id="screen-start">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <h1>Study Now</h1>
+      </div>
+      <div class="start-content">
+        <div class="input-group">
+          <label for="study-topic">What are you studying right now?</label>
+          <input
+            type="text"
+            id="study-topic"
+            placeholder="Focus topic (optional)"
+            autocomplete="off"
+            maxlength="60"
+          />
+        </div>
+        <button class="btn-primary" id="btn-start">
+          <span class="btn-text" id="start-btn-text">Start 25 Minute Session</span>
+          <span class="btn-arrow">→</span>
+        </button>
+        <div class="duration-toggle">
+          <span id="duration-display">25 min</span> • <a href="#" id="btn-change-duration">change</a>
+        </div>
+        <div class="streak-display" id="streak-display"><span class="day-number"></span>Day 0</span> <span class="streak-label">streak</span></div>
+        <p class="streak-subtext">Don't break it.</p>
+        <p class="microcopy">Start before you think.</p>
+        <div class="input-group hidden" id="duration-input-group">
+          <label for="session-duration">Session length (minutes)</label>
+          <input
+            type="number"
+            id="session-duration"
+            placeholder="25"
+            value="25"
+            min="1"
+            max="180"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Screen 2: Focus -->
+    <div class="screen hidden" id="screen-focus">
+      <div class="focus-header">
+        <p class="topic-label" id="focus-topic"></p>
+        <span class="status-pill">Studying</span>
+      </div>
+      <div class="timer-block large">
+        <div class="timer-display" id="timer-display">25:00</div>
+        <svg class="timer-ring" viewBox="0 0 200 200">
+          <circle class="ring-bg" cx="100" cy="100" r="88"/>
+          <circle class="ring-progress" cx="100" cy="100" r="88" id="ring-progress"/>
+        </svg>
+      </div>
+      <p class="microcopy microcopy-session">Stay.</p>
+      <button class="btn-ghost" id="btn-cancel">end session</button>
+    </div>
+
+    <!-- Screen 3: Break -->
+    <div class="screen hidden" id="screen-break">
+      <div class="focus-header">
+        <p class="topic-label">Time to rest</p>
+        <span class="status-pill break">Break</span>
+      </div>
+      <div class="timer-block large break">
+        <div class="timer-display" id="break-display">05:00</div>
+        <svg class="timer-ring" viewBox="0 0 200 200">
+          <circle class="ring-bg" cx="100" cy="100" r="88"/>
+          <circle class="ring-progress" cx="100" cy="100" r="88" id="break-ring-progress"/>
+        </svg>
+      </div>
+      <button class="btn-ghost" id="btn-skip-break">skip break</button>
+    </div>
+
+    <!-- Screen 4: Complete -->
+    <div class="screen hidden" id="screen-done">
+      <div class="done-content">
+        <div class="check-mark">✓</div>
+        <h2 class="done-title">Session Complete</h2>
+        <div class="done-info">
+          <p class="done-sub">You studied: <span id="done-topic"></span></p>
+        </div>
+        <div class="today-stats">
+          <p class="today-title">Today</p>
+          <p class="today-data"><span id="today-sessions">0</span> sessions • <span id="today-time">0m</span></p>
+        </div>
+        <p class="microcopy microcopy-complete" id="completion-microcopy">Good.</p>
+        <div class="stats-list">
+          <p class="stats-item">Total focus time: <span id="stats-total-time">0h 0m</span></p>
+          <p class="stats-item">Total sessions: <span id="stats-total-sessions">0</span></p>
+          <p class="stats-item">Longest streak: <span id="stats-longest-streak">0 days</span></p>
+        </div>
+        <button class="btn-primary" id="btn-restart">
+          <span class="btn-text">Start Another Session</span>
+          <span class="btn-arrow">→</span>
+        </button>
+        <p id="sessions-today" class="sessions-counter">Sessions today: 0</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Settings Button -->
+  <button class="settings-icon" id="btn-settings" title="Settings">⚙</button>
+
+  <!-- Settings Panel -->
+  <div class="settings-panel hidden" id="settings-panel">
+    <div class="settings-content">
+      <h3>Settings</h3>
+      <div class="setting-item">
+        <label for="break-percentage">Break duration (%)</label>
+        <input
+          type="number"
+          id="break-percentage"
+          value="20"
+          min="10"
+          max="35"
+        />
+        <span class="setting-help">10-35% of session time</span>
+      </div>
+      <button class="btn-ghost" id="btn-close-settings">Close</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

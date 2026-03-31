@@ -1,0 +1,38 @@
+{
+  "productName": "Study Now",
+  "version": "1.0.0",
+  "identifier": "com.studynow.timer",
+  "build": {
+    "frontendDist": "../ui"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "security": {
+      "assetProtocol": {
+        "enable": true,
+        "scope": ["**"]
+      },
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; connect-src 'self'; media-src 'self' asset: https://asset.localhost"
+    },
+    "windows": [
+      {
+        "title": "Study Now",
+        "width": 420,
+        "height": 600,
+        "resizable": true,
+        "maximized": true,
+        "decorations": false,
+        "center": true,
+        "theme": "Dark"
+      }
+    ]
+  },
+  "bundle": {
+    "active": true,
+    "targets": "nsis",
+    "icon": [
+      "icons/icon.ico",
+      "icons/icon.png"
+    ]
+  }
+}
