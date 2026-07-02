@@ -8,13 +8,17 @@ Study Now is a simple, distraction-free focus timer designed to help you stay pr
 
 ## Screenshots
 
-<div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 0;">
-  <img src="ui/assets/Screenshot 2026-07-02 210028.png" alt="Screenshot 1" style="grid-column: span 2; width: 100%; height: auto;">
-  <img src="ui/assets/Screenshot 2026-07-02 210052.png" alt="Screenshot 2" style="grid-column: span 2; width: 100%; height: auto;">
-  <img src="ui/assets/Screenshot 2026-07-02 210110.png" alt="Screenshot 3" style="grid-column: span 2; width: 100%; height: auto;">
-  <img src="ui/assets/Screenshot 2026-07-02 210235.png" alt="Screenshot 4" style="grid-column: span 3; width: 100%; height: auto;">
-  <img src="ui/assets/Screenshot 2026-07-02 210519.png" alt="Screenshot 5" style="grid-column: span 3; width: 100%; height: auto;">
-</div>
+<table>
+  <tr>
+    <td colspan="2"><img src="ui/assets/Screenshot 2026-07-02 210028.png" alt="Screenshot 1" width="100%"></td>
+    <td colspan="2"><img src="ui/assets/Screenshot 2026-07-02 210052.png" alt="Screenshot 2" width="100%"></td>
+    <td colspan="2"><img src="ui/assets/Screenshot 2026-07-02 210110.png" alt="Screenshot 3" width="100%"></td>
+  </tr>
+  <tr>
+    <td colspan="3"><img src="ui/assets/Screenshot 2026-07-02 210235.png" alt="Screenshot 4" width="100%"></td>
+    <td colspan="3"><img src="ui/assets/Screenshot 2026-07-02 210519.png" alt="Screenshot 5" width="100%"></td>
+  </tr>
+</table>
 
 ## Features
 
