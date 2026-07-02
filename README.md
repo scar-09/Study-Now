@@ -8,14 +8,12 @@ Study Now is a simple, distraction-free focus timer designed to help you stay pr
 
 ## Screenshots
 
-<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 10px;">
-  <img src="ui/assets/Screenshot 2026-07-02 210028.png" alt="Screenshot 1" style="width: 100%; height: auto; border-radius: 8px;">
-  <img src="ui/assets/Screenshot 2026-07-02 210052.png" alt="Screenshot 2" style="width: 100%; height: auto; border-radius: 8px;">
-  <img src="ui/assets/Screenshot 2026-07-02 210110.png" alt="Screenshot 3" style="width: 100%; height: auto; border-radius: 8px;">
-</div>
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-  <img src="ui/assets/Screenshot 2026-07-02 210235.png" alt="Screenshot 4" style="width: 100%; height: auto; border-radius: 8px;">
-  <img src="ui/assets/Screenshot 2026-07-02 210519.png" alt="Screenshot 5" style="width: 100%; height: auto; border-radius: 8px;">
+<div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px;">
+  <img src="ui/assets/Screenshot 2026-07-02 210028.png" alt="Screenshot 1" style="grid-column: span 2; width: 100%; height: auto; border-radius: 8px;">
+  <img src="ui/assets/Screenshot 2026-07-02 210052.png" alt="Screenshot 2" style="grid-column: span 2; width: 100%; height: auto; border-radius: 8px;">
+  <img src="ui/assets/Screenshot 2026-07-02 210110.png" alt="Screenshot 3" style="grid-column: span 2; width: 100%; height: auto; border-radius: 8px;">
+  <img src="ui/assets/Screenshot 2026-07-02 210235.png" alt="Screenshot 4" style="grid-column: span 3; width: 100%; height: auto; border-radius: 8px;">
+  <img src="ui/assets/Screenshot 2026-07-02 210519.png" alt="Screenshot 5" style="grid-column: span 3; width: 100%; height: auto; border-radius: 8px;">
 </div>
 
 ## Features
